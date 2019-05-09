@@ -4,16 +4,20 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
     "test": "jest"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "formik": "^1.5.4",
     "lodash": "^4.17.11",
     "react": "16.8.3",
     "react-native": "0.59.8",
     "react-native-gesture-handler": "^1.2.1",
     "react-navigation": "^3.9.1",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "yup": "^0.27.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
