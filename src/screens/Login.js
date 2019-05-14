@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { Dimensions } from 'react-native'
 
 import { Text, Button, TextInput } from '../components/elements'
 import Layout from '../components/Layout'
 import Header from '../components/elements/Header'
 
+const { height } = Dimensions.get('window')
+
 const InputWrapper = styled.View`
-  flex: 0.5;
-  justify-content: flex-end;
+  height: ${height / 4};
+  margin-top: 30;
 `
 
 const BottomContainer = styled.View`
@@ -42,6 +45,7 @@ export default class Login extends Component {
           <TextInput label="Email" placeholder="abc@gmail.com" />
           <TextInput label="Password" placeholder="Enter Password" isPasswordInput />
         </InputWrapper>
+
         <BottomContainer>
           <Button title="Log in" />
           <ForgotPassword isCentered>Forgot Password ?</ForgotPassword>

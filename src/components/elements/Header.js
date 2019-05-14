@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Image } from 'react-native'
+import { View, Image, Dimensions, Platform } from 'react-native'
 import styled from 'styled-components'
 import Touchable from 'react-native-platform-touchable'
 
@@ -7,12 +7,17 @@ import { Text } from '../elements'
 import backArrow from '../../assets/images/icons/back-arrow.png'
 import searchIcon from '../../assets/images/icons/search.png'
 
-const Container = styled.View``
+const { height } = Dimensions.get('window')
+
+const Container = styled.View`
+  margin-top: 20;
+  justify-content: space-between;
+  height: ${height / 6};
+`
 
 const Wrapper = styled.View`
   flex-direction: row;
   justify-content: space-between;
-  padding-vertical: 20;
 `
 const TitleStyled = styled(Text)`
   font-size: ${({ theme }) => theme.xLarge};
