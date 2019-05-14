@@ -2,18 +2,13 @@ import { Platform } from 'react-native'
 import fontSizes from './fontSizes'
 import fontWeights from './fontWeights'
 
-const size = {
-  regular: 20,
-  medium: 18,
-  large: 22,
-  small: 16,
-  extraSmall: 12,
-}
-
 const theme = {
   primaryColor: '#667EEA',
-  secondaryColor: '#c56a36',
+  secondaryColor: '#64B6FF',
+  headingText: '#323232',
   textColor: '#656565',
+  labelColor: '#A6A6A6',
+  borderColor: '#DADADA',
   xLarge: fontSizes.xbig,
   large: fontSizes.big,
   xxMedium: fontSizes.xxmedium,
@@ -21,6 +16,7 @@ const theme = {
   medium: fontSizes.medium,
   small: fontSizes.small,
   verySmall: fontSizes.verySmall,
+  btnText: '#fff',
   activeColor: '#fff',
   inactiveColor: '#fff',
   rippleColor: '#006600',
@@ -33,17 +29,17 @@ const theme = {
   bold: fontWeights.bold,
   extraBold: fontWeights.extraBold,
   heavy: fontWeights.heavy,
-  primaryFontFamily: 'NunitoSans',
+  primaryFontFamily: 'Nunito',
   secondaryFontFamily: 'OpenSans',
-  containerWidth: 15,
+  containerWidth: 25,
 }
 
 export default theme
 
 export const boxShadow = Platform.select({
   ios: {
-    shadowColor: '#667EEA',
-    shadowOffset: { width: 5, height: 10 },
+    shadowColor: theme.primaryColor,
+    shadowOffset: { width: 1, height: 10 },
     shadowOpacity: 0.4,
     shadowRadius: 5,
   },

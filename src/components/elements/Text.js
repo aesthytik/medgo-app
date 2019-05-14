@@ -7,14 +7,14 @@ import theme from '../../utils/theme'
 
 const Container = styled(Text)`
   font-size: ${(props) => props.theme.large};
-  color: ${(props) => (props.primary ? '#ffffff' : props.theme.textColor)};
+  color: ${(props) => props.theme.textColor};
   font-family: ${(props) => props.fontFamily};
   flex-wrap: wrap;
+  text-align: ${({ isCentered }) => (isCentered ? 'center' : 'auto')};
 `
 
 const MyText = (props) => {
   const { style, children, primary, light, semibold, bold, italic, extrabold, ...other } = props
-
   let fontFamily = primary ? theme.primaryFontFamily : theme.secondaryFontFamily
 
   if (light) {
@@ -37,10 +37,6 @@ const MyText = (props) => {
     </Container>
   )
 }
-
-// MyText.defaultProps = {
-//   fontFamily: 'Nunito',
-// }
 
 MyText.propTypes = {
   style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),

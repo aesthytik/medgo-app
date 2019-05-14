@@ -1,4 +1,6 @@
 import Text from './Text'
 import Button from './Button'
+import TextInput from './TextInput'
+import Header from './Header'
 
-export { Text, Button }
+export { Text, Button, TextInput, Header }

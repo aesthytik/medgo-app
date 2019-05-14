@@ -1,41 +1,38 @@
-import React from "react";
-import {
-  createStackNavigator,
-  createAppContainer,
-  createSwitchNavigator
-} from "react-navigation";
-import { ThemeProvider } from "styled-components";
+import React from 'react'
+import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation'
+import { ThemeProvider } from 'styled-components'
 
-import { AuthLoading, Dashboard, Login } from "./screens";
-import theme from "./utils/theme";
+import { AuthLoading, Dashboard, Login, Welcome } from './screens'
+import theme from './utils/theme'
 
 const AppStack = createStackNavigator({
-  Dashboard
-});
+  Dashboard,
+})
 
 const AuthStack = createAppContainer(
   createStackNavigator({
-    Login
+    Welcome,
+    Login,
   })
-);
+)
 
 const RootStack = createAppContainer(
   createSwitchNavigator(
     {
       AuthLoading: AuthLoading,
       App: AppStack,
-      Auth: AuthStack
+      Auth: AuthStack,
     },
     {
-      initialRouteName: "AuthLoading"
+      initialRouteName: 'AuthLoading',
     }
   )
-);
+)
 
 const App = () => (
   <ThemeProvider theme={theme}>
     <RootStack />
   </ThemeProvider>
-);
+)
 
-export default App;
+export default App

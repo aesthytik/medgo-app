@@ -1,52 +1,55 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, { Component } from 'react'
-import { Platform, StyleSheet, View } from 'react-native'
-import { Text, Button } from '../components/elements'
+import styled from 'styled-components'
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
-})
+import { Text, Button, TextInput } from '../components/elements'
+import Layout from '../components/Layout'
+import Header from '../components/elements/Header'
 
+const InputWrapper = styled.View`
+  flex: 0.5;
+  justify-content: flex-end;
+`
+
+const BottomContainer = styled.View`
+  margin-top: 20;
+`
+
+const ForgotPassword = styled(Text)`
+  font-size: 14;
+  margin-top: 15;
+`
+
+const DontHaveAnAccount = styled(Text)`
+  font-size: 14;
+  margin-top: 10;
+`
+
+const SignUp = styled(Text)`
+  font-size: 14;
+  color: ${({ theme }) => theme.headingText};
+`
 export default class Login extends Component {
   static navigationOptions = {
     header: null,
   }
 
   render() {
+    const { navigation } = this.props
     return (
-      <View style={styles.container}>
-        <Text primary bold>
-          Login
-        </Text>
-        <Button title="Login" />
-      </View>
+      <Layout>
+        <Header title={`Login`} navigation={navigation} />
+        <InputWrapper>
+          <TextInput label="Email" placeholder="abc@gmail.com" />
+          <TextInput label="Password" placeholder="Enter Password" isPasswordInput />
+        </InputWrapper>
+        <BottomContainer>
+          <Button title="Log in" />
+          <ForgotPassword isCentered>Forgot Password ?</ForgotPassword>
+          <DontHaveAnAccount isCentered>
+            Don't have an account ? <SignUp>Sign Up</SignUp>
+          </DontHaveAnAccount>
+        </BottomContainer>
+      </Layout>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-})

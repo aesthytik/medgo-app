@@ -1,5 +1,6 @@
-import AuthLoading from "./AuthLoading";
-import Dashboard from "./Dashboard";
-import Login from "./Login";
+import AuthLoading from './AuthLoading'
+import Dashboard from './Dashboard'
+import Login from './Login'
+import Welcome from './Welcome'
 
-export { AuthLoading, Dashboard, Login };
+export { AuthLoading, Dashboard, Login, Welcome }

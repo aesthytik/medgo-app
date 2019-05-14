@@ -55,15 +55,14 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>NunitoSans-Bold.ttf</string>
-		<string>NunitoSans-ExtraBold.ttf</string>
-		<string>NunitoSans-ExtraLight.ttf</string>
-		<string>NunitoSans-Light.ttf</string>
-		<string>NunitoSans-Regular.ttf</string>
-		<string>NunitoSans-SemiBold.ttf</string>
-		<string>NunitoSans-BoldItalic.ttf</string>
-		<string>NunitoSans-Italic.ttf</string>
-		<string>NunitoSans-SemiBoldItalic.ttf</string>
+		<string>Nunito-BoldItalic.ttf</string>
+		<string>Nunito-LightItalic.ttf</string>
+		<string>Nunito-SemiBoldItalic.ttf</string>
+	    <string>Nunito-Bold.ttf</string>
+		<string>Nunito-Light.ttf</string>
+		<string>Nunito-Regular.ttf</string>
+		<string>Nunito-SemiBold.ttf</string>
+		<string>Nunito-ExtraBold.ttf</string>
 		<string>OpenSans-Bold.ttf</string>
 		<string>OpenSans-Light.ttf</string>
 		<string>OpenSans-Regular.ttf</string>
