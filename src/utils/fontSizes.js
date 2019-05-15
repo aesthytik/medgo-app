@@ -5,7 +5,7 @@ const fontSizes = {
   big: moderateScale(22),
   xxmedium: moderateScale(20),
   xmedium: moderateScale(19),
-  medium: moderateScale(16),
+  medium: moderateScale(13),
   small: moderateScale(14),
   verySmall: moderateScale(12),
 }

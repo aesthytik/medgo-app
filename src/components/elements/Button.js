@@ -11,7 +11,7 @@ const Container = styled(Touchable)`
 `
 
 const GradientStyled = styled(LinearGradient)`
-  border-radius: 4;
+  border-radius: ${({ theme }) => theme.borderRadius};
   align-items: center;
   justify-content: center;
   padding-vertical: 15;
@@ -23,7 +23,7 @@ const TextStyled = styled(Text)`
 `
 
 const MyButton = ({ title, ...other }) => (
-  <Container {...other} style={[boxShadow]}>
+  <Container {...other} style={[boxShadow]} background={Touchable.Ripple(theme.secondaryColor)}>
     <GradientStyled
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 0 }}

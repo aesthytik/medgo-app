@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Dimensions } from 'react-native'
+import { Dimensions, Platform } from 'react-native'
 
 import { Text, Button, TextInput } from '../components/elements'
 import Layout from '../components/Layout'
@@ -9,12 +9,12 @@ import Header from '../components/elements/Header'
 const { height } = Dimensions.get('window')
 
 const InputWrapper = styled.View`
-  height: ${height / 4};
+  height: ${height / 4.5};
   margin-top: 30;
 `
 
 const BottomContainer = styled.View`
-  margin-top: 20;
+  margin-top: ${Platform.OS === 'ios' ? 20 : 30};
 `
 
 const ForgotPassword = styled(Text)`

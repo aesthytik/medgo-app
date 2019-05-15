@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Dimensions } from 'react-native'
+import { Dimensions, Platform } from 'react-native'
 
 import { Text, Button, TextInput } from '../components/elements'
 import Layout from '../components/Layout'
@@ -14,12 +14,7 @@ const InputWrapper = styled.View`
 `
 
 const BottomContainer = styled.View`
-  margin-top: 80;
-`
-
-const ForgotPassword = styled(Text)`
-  font-size: 14;
-  margin-top: 15;
+  margin-top: ${Platform.OS === 'ios' ? 80 : 100};
 `
 
 const DontHaveAnAccount = styled(Text)`

@@ -7,7 +7,7 @@ const theme = {
   secondaryColor: '#64B6FF',
   headingText: '#323232',
   textColor: '#656565',
-  labelColor: '#A6A6A6',
+  labelColor: '#656565',
   borderColor: '#DADADA',
   xLarge: fontSizes.xbig,
   large: fontSizes.big,
@@ -32,6 +32,7 @@ const theme = {
   primaryFontFamily: 'Nunito',
   secondaryFontFamily: 'OpenSans',
   containerWidth: 25,
+  borderRadius: 4,
 }
 
 export default theme
