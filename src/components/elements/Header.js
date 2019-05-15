@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Image, Dimensions, Platform } from 'react-native'
 import styled from 'styled-components'
 import Touchable from 'react-native-platform-touchable'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 import { Text } from '../elements'
 import backArrow from '../../assets/images/icons/back-arrow.png'
@@ -29,7 +30,7 @@ const Header = ({ title, hasSearch, navigation }) => (
   <Container>
     <Wrapper>
       <Touchable onPress={() => navigation.goBack()}>
-        <Image source={backArrow} />
+        <Icon name="ios-arrow-round-back" size={50} color="#000" />
       </Touchable>
       {hasSearch && <Image source={searchIcon} />}
     </Wrapper>

@@ -14,7 +14,7 @@ const InputWrapper = styled.View`
 `
 
 const BottomContainer = styled.View`
-  margin-top: 20;
+  margin-top: 80;
 `
 
 const ForgotPassword = styled(Text)`
@@ -27,11 +27,11 @@ const DontHaveAnAccount = styled(Text)`
   margin-top: 10;
 `
 
-const SignUp = styled(Text)`
+const Login = styled(Text)`
   font-size: 14;
   color: ${({ theme }) => theme.headingText};
 `
-export default class Login extends Component {
+export default class SignUp extends Component {
   static navigationOptions = {
     header: null,
   }
@@ -40,20 +40,19 @@ export default class Login extends Component {
     const { navigation } = this.props
     return (
       <Layout>
-        <Header title={`Login`} navigation={navigation} />
+        <Header title={`Sign Up`} navigation={navigation} />
         <InputWrapper>
+          <TextInput label="Name" placeholder="Enter Name" />
           <TextInput label="Email" placeholder="abc@gmail.com" />
           <TextInput label="Password" placeholder="Enter Password" isPasswordInput />
         </InputWrapper>
 
         <BottomContainer>
-          <Button title="Log in" />
-          <ForgotPassword isCentered onPress={() => navigation.navigate('ForgotPassword')}>
-            Forgot Password ?
-          </ForgotPassword>
+          <Button title="Sign Up" />
+
           <DontHaveAnAccount isCentered>
-            Don't have an account ?{' '}
-            <SignUp onPress={() => navigation.navigate('SignUp')}>Sign Up</SignUp>
+            Already have an account ?{' '}
+            <Login onPress={() => navigation.navigate('Login')}>Log In</Login>
           </DontHaveAnAccount>
         </BottomContainer>
       </Layout>

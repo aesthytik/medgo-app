@@ -2,7 +2,7 @@ import React from 'react'
 import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation'
 import { ThemeProvider } from 'styled-components'
 
-import { AuthLoading, Dashboard, Login, Welcome } from './screens'
+import { AuthLoading, Dashboard, Login, Welcome, SignUp, ForgotPassword } from './screens'
 import theme from './utils/theme'
 
 const AppStack = createStackNavigator({
@@ -13,6 +13,8 @@ const AuthStack = createAppContainer(
   createStackNavigator({
     Welcome,
     Login,
+    SignUp,
+    ForgotPassword,
   })
 )
 

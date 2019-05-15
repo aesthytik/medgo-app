@@ -35,6 +35,7 @@ class Welcome extends React.Component {
     header: null,
   }
   render() {
+    const { navigation } = this.props
     return (
       <Layout>
         <Heading>
@@ -50,8 +51,10 @@ class Welcome extends React.Component {
           />
         </ImageStyled>
         <Buttons>
-          <Button title="Log in" onPress={() => this.props.navigation.navigate('Login')} />
-          <SignUp isCentered>Sign Up</SignUp>
+          <Button title="Log in" onPress={() => navigation.navigate('Login')} />
+          <SignUp isCentered onPress={() => navigation.navigate('SignUp')}>
+            Sign Up
+          </SignUp>
         </Buttons>
       </Layout>
     )
